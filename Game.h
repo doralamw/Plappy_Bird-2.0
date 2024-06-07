@@ -7,6 +7,8 @@ class BaseObject;
 class Background;
 class Bird;
 class Pipe;
+class Button;
+class Menu;
 
 class Game {
 private:
@@ -14,17 +16,12 @@ private:
 	SDL_Renderer* ren;
 
 	bool isRunning;
+	bool loading;
 
 	BaseObject* background;
 
 	Bird* bird;
-
-	Mix_Music* Music;
-
-	Mix_Chunk* wing;
-	Mix_Chunk* die;
-	Mix_Chunk* hit;
-	Mix_Chunk* point;
+	Menu* menu;
 
 public:
 	Game();
